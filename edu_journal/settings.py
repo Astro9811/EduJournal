@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-sdqi4_*n94!ropeugt6gs@g=+fz2b=-0vxeecke4#i4s6b%i&k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['edujournal.herokuapp.com/']
 
 
 # Application definition
@@ -140,3 +140,4 @@ LOGIN_URL = 'users:login'
 django_heroku.settings(locals())
 
 
+f
