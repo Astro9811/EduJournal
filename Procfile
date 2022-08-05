@@ -1,1 +1,1 @@
-web: gunicorn edujournal.wsgi
+web: gunicorn edu_journal.wsgi
