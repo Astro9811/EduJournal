@@ -1,0 +1,21 @@
+{% extends 'edujournals/base.html' %}
+
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <h2>Add a new entry:</h2>
+{% endblock page_header %}
+
+
+{% block content %}
+  <p><a href = "{% url 'edujournals:topic' topic.id %}">{{ topic }}</a></p>
+  
+  <form action = "{% url 'edujournals:new_entry' topic.id %}" method = 'post' class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">Add entry</button>
+    {% endbuttons %}
+  </form>
+
+{% endblock content %}

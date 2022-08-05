@@ -1,0 +1,20 @@
+{% extends 'edujournals/base.html' %}
+
+{% block page_header %}
+  <h1>Topics</h1>
+{% endblock page_header %}
+
+{% block content %}
+
+    {% for topic in topics %}
+      <ul><h3>
+	    <a href="{% url 'edujournals:topic' topic.id %}">{{topic}}</a>
+	  </h3></ul>
+    {% empty %}
+      <ul><h3> No topics have been added yet. </h3></ul>
+    {% endfor %}
+
+	 
+  <h3><a href = "{% url 'edujournals:new_topic' %}">Add a new topic</a></h3>
+	
+{% endblock content %}
